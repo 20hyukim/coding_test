@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// 백준 1463번 : 1로 만들기 (dp bottom-up)
+// 백준 1463번 : 1로 만들기
 public class B1463_2_s {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

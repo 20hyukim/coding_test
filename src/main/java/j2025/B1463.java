@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// 백준 1463번 : 1로 만들기 - 시간 초과 ㅜ (dp Top-down)
+// 백준 1463번 : 1로 만들기 - 시간 초과 ㅜ
 public class B1463 {
     static int[] dp = new int[1000001];
     public static void main(String[] args) throws IOException {
