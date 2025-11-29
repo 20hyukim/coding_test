@@ -6,9 +6,7 @@ import java.io.InputStreamReader;
 
 // 백준 15721: 번데기
 public class B15721_2 {
-    static int a;
-    static int t;
-    static int isDeggi;
+    static int a, t, isDeggi;
 
     static int deggi = 0;
     static int bbun = 0;
