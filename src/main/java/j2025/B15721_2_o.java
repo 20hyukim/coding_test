@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 백준 15721: 번데기
-public class B15721_2 {
+public class B15721_2_o {
     static int a, t, isDeggi;
 
     static int deggi = 0;
