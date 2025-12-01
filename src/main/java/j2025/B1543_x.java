@@ -24,7 +24,6 @@ public class B1543_x {
         }
 
 
-
         System.out.println(cnt);
     }
 }
