@@ -31,7 +31,7 @@ public class B17521 {
             }
         }
 
-        // 최소 때, 매수를 해놨으니까
+        // 최소 때, 매수를 해놨으니까 price[n-1] 이거 해도..? 최대 아니면 어짜피 coin (0) * price[n-1]
         money += coin * price[n-1];
 
         System.out.println(money);
