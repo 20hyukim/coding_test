@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 // 백준 9375번 : 패션왕 신해빈
-public class B9375_2 {
+public class B9375_2_x {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int cases = Integer.parseInt(br.readLine());
