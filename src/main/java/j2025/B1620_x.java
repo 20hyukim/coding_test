@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.HashMap;
 
 // 백준 1620번 : 나는야 포켓몬 마스터 이다솜
-public class B1620 {
+public class B1620_x {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

@@ -3,7 +3,7 @@ package j2025;
 import java.io.*;
 
 // 백준 2581번 : 소수
-public class B2581 {
+public class B2581_o {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
