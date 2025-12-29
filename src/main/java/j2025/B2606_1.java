@@ -1,10 +1,16 @@
 package j2025;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
 
 // 백준 2606번 : 바이러스
-public class B2606_o {
+public class B2606_1 {
+    static List<Integer>[] networks;
+    static boolean[] visited;
+    static int cnt = 0;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -12,7 +18,8 @@ public class B2606_o {
         int compN = Integer.parseInt(br.readLine());
         int couple = Integer.parseInt(br.readLine());
 
-        List<Integer>[] networks = new ArrayList[compN+1];
+        networks = new ArrayList[compN+1];
+        visited = new boolean[compN+1];
 
         for (int i = 1; i < compN+1; i++) {
             networks[i] = new ArrayList<>();
@@ -27,28 +34,25 @@ public class B2606_o {
             networks[e].add(s);
         }
 
-        boolean[] visited = new boolean[compN+1];
+        dfs(1);
 
-        Deque<Integer> queue = new ArrayDeque<>();
-        queue.addLast(1);
-
-        while (!queue.isEmpty()) {
-            int popped = queue.removeFirst();
-            if (!visited[popped]) {
-                visited[popped] = true;
-                for (int node: networks[popped]) queue.addLast(node);
-            }
-        }
-        int cnt = 0;
-
-        for (int i = 2; i < compN+1; i++) {
-            if (visited[i]) cnt++;
-        }
-
-        bw.write(cnt+"");
+        bw.write(cnt-1+"");
         bw.flush();
 
         bw.close();
         br.close();
+
+    }
+
+    private static void dfs(int n) {
+        visited[n] = true;
+        cnt += 1;
+
+        for(int w : networks[n]) {
+            if (visited[w]) {
+                continue;
+            }
+            dfs(w);
+        }
     }
 }
