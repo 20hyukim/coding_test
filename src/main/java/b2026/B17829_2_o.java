@@ -52,7 +52,12 @@ public class B17829_2_o {
         secondList.add(getResult(repeat, i+len, j+len));
 
         secondList.sort(Collections.reverseOrder());
+        /** Collections가 아니라, Comparator를 사용하는 것이 일반적
+        // 오름차순
+        secondList.sort(Comparator.naturalOrder());
 
+        // 내림차순
+        secondList.sort(Comparator.reverseOrder()); **/
         return secondList.get(1);
     }
 }
