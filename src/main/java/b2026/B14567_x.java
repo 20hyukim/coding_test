@@ -7,7 +7,7 @@ import java.util.Deque;
 import java.util.List;
 
 // 백준 14567번 : 선수과목 (Prerequisite)
-public class B14567 {
+public class B14567_x {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
