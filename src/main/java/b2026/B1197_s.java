@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-// 백준 1197번 : 최소 스패닝 트리
+// 백준 1197번 : 최소 스패닝 트리 - 크루스칼 알고리즘 풀이 (시간 되면 프림도..?)
 public class B1197_s {
     public static int[] parent;
     public static void main(String[] args) throws IOException {
