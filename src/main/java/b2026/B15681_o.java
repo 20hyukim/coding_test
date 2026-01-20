@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 백준 15681번 : 트리와 쿼리
-public class B15681 {
+public class B15681_o {
     static List<Integer>[] edges;
     static int[] childNodes;
     public static void main(String[] args) throws IOException {
@@ -19,7 +19,6 @@ public class B15681 {
 
         edges = new ArrayList[n+1];
         childNodes = new int[n+1];
-        boolean[] visited = new boolean[n+1];
 
         for (int i = 1; i < n+1; i++) {
             edges[i] = new ArrayList<>();
@@ -33,8 +32,7 @@ public class B15681 {
             edges[s].add(e);
             edges[e].add(s);
         }
-        visited[r] = true;
-        getChilds(r, visited);
+        getChilds(r, -1);
 
         for (int i = 0; i < q; i++) {
             int qq = Integer.parseInt(br.readLine());
@@ -46,14 +44,13 @@ public class B15681 {
         br.close();
     }
 
-    private static int getChilds(int r, boolean[] visited) {
+    // 트리 이므로, visited[] 불 필요. parent로 가는 edge만 안타면 됨.
+    private static int getChilds(int r, int parent) {
         int cnt = 0;
         for (int i = 0; i < edges[r].size(); i++) {
             int c = edges[r].get(i);
-            if (!visited[c]) {
-                visited[c] = true;
-                cnt += getChilds(c, visited);
-                visited[c] = false;
+            if (c != parent) {
+                cnt += getChilds(c, r);
             }
         }
         return childNodes[r] = cnt + 1;
