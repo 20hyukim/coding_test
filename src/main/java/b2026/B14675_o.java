@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 백준 14675번 : 단절점과 단절선
-public class B14675 {
+public class B14675_o {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
